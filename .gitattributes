@@ -12,6 +12,11 @@
 # Shell launchers must stay LF to run at all.
 *.sh text eol=lf
 
+# Windows batch launchers are more reliable with CRLF under cmd.exe, and the
+# release archives are what most Windows users unzip and double-click.
+*.cmd text eol=crlf
+*.bat text eol=crlf
+
 # Assets Git must never rewrite.
 *.gif binary
 *.png binary
